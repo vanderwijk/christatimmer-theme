@@ -1,0 +1,122 @@
+/*
+Theme Name: Christa Timmer
+Description: Child theme for the Fran theme
+Author: Johan van der Wijk
+Template: fran
+*/
+
+
+.header .site-title {
+	background-image: url( '/wp-content/themes/christatimmer/img/logo-christa-timmer.png' );
+	background-repeat: no-repeat;
+	padding-left: 60px;
+	padding-top: 50px;
+	white-space: nowrap;
+	margin: 60px 0 0 0;
+}
+.header .nav {
+	margin-right: 0;
+}
+.header .login-logout-link {
+	float: left;
+}
+.home .content .block.hentry {
+	padding: 0;
+}
+.home .entry-content,
+.home .entry-footer {
+	padding: 0 3.92156862745098%;
+}
+.home .entry-footer {
+	padding-bottom: 1.96078431372549%;
+}
+.home .featured-image {
+	border-radius: 5px 5px 0 0;
+}
+.category-title {
+	margin: 0 0 .5em 0;
+}
+#text-3 a {
+	border-bottom: 1px dotted #fff;
+}
+.recent .block h3 {
+	margin: 0;
+}
+.recent .one-third .block {
+	padding: 0;
+}
+.recent .one-third .block img {
+	border-radius: 4px 4px 0 0;
+}
+.recent .one-third .block h4 {
+	padding: 3.92157% 3.92157% 3.92157% 3.92157%;
+	margin: 0;
+}
+#membership-wrapper .form-membership .button,
+.form-membership .button {
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 2px;
+	background-color: #622181;
+	border: none;
+	padding: 0 2em;
+	display: block;
+	line-height:1.75em;
+}
+.form-membership .button:hover {
+	border: none;
+}
+.form-membership .bottombar {
+	padding: 10px 0;
+	line-height: 2.125em;
+}
+.upgradebox {
+	/*display: none;*/
+}
+.single .wp-post-image {
+	min-width: 100%;
+	height: auto;
+}
+#membership-wrapper form {
+	clear: both;
+	display: block!important;
+}
+#membership-wrapper #pronamic-pay-form {
+	margin-top: 50px;
+}
+.nieuw,
+.gratis,
+.korting {
+	z-index: 9997;
+	position: absolute;
+	right: 390px;
+	top: 25%;
+	width: 165px;
+	height: 165px;
+}
+.gratis {
+	right: 245px;
+}
+.korting {
+	right: 100px;
+}
+
+/* Smartphones and HiDPI smartphones */
+@media screen and (max-width: 480px),
+screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+	.home .main {
+		padding-top: 0;
+	}
+	.home .block.hentry {
+		width: 100%;
+		margin: 0;
+	}
+	.home .featured-image {
+		border-radius: 0;
+	}
+	.nieuw,
+	.gratis,
+	.korting {
+		display: none;
+	}
+}
