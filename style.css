@@ -148,7 +148,8 @@ form.rcp_form fieldset {
 	margin: 0;
 }
 .rcp_form .rcp-recurring-total,
-.rcp_header {
+.rcp_header,
+.rcp_form .rcp_level_duration {
 	text-transform: lowercase;
 }
 .rcp_form .rcp-recurring-total th:first-letter,
