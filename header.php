@@ -16,7 +16,7 @@ Website development by VanderWijk Consultancy - http://vanderwijk.nl
 
 <body <?php body_class(); ?>>
 
-	<header class="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header class="header" id="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<div class="top" id="top">
 			<div class="row">
 				<div class="col">
@@ -53,17 +53,17 @@ Website development by VanderWijk Consultancy - http://vanderwijk.nl
 						<h2 class="site-title"><?php bloginfo( 'name' ); ?></h2>
 					</a>
 					<a href="/abonnement/registreren/" class="nieuw">
-						<img src="/wp-content/themes/christatimmer/img/nieuw.svg" alt="Nieuw" onerror="this.src='/wp-content/themes/christatimmer/img/nieuw.png'">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/nieuw.svg" alt="Nieuw">
 					</a>
 					<a href="/cursus/billen-benen-buik-training/" class="gratis">
-						<img src="/wp-content/themes/christatimmer/img/gratis.svg" alt="Gratis" onerror="this.src='/wp-content/themes/christatimmer/img/gratis.png'">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gratis.svg" alt="Gratis">
 					</a>
 					<a href="/abonnement/registreren/" class="korting">
-						<img src="/wp-content/themes/christatimmer/img/korting.svg" alt="Korting" onerror="this.src='/wp-content/themes/christatimmer/img/korting.png'">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/korting.svg" alt="Korting">
 					</a>
 				</div>
 			</div>
 		</div>
 	</header>
 <?php if ( ! dynamic_sidebar( 'intro' ) ) : endif ?>
-	<div class="main" role="main">
+	<div class="main" role="main" id="main">

@@ -7,7 +7,7 @@ Template: fran
 
 
 .header .site-title {
-	background-image: url( '/wp-content/themes/christatimmer/img/logo-christa-timmer.png' );
+	background-image: url( '/wp-content/themes/christatimmer-theme/img/logo-christa-timmer.png' );
 	background-repeat: no-repeat;
 	padding-left: 60px;
 	padding-top: 50px;
@@ -99,6 +99,52 @@ Template: fran
 }
 .korting {
 	right: 100px;
+}
+
+.rcp_user_fieldset input,
+.rcp_card_fieldset select {
+	width: 100%;
+}
+.rcp_card_fieldset select {
+	padding: 5px 4px;
+}
+#rcp_submit_wrap .rcp-button {
+	display: block;
+	margin: 20px auto 0 auto;
+	font-size: 22px;
+}
+
+#rcp_user_login_wrap {
+	display: none;
+}
+
+.rcp_form .rcp_login_link {
+	border: 1px solid #eeeeee;
+	background-color: #fafafa;
+	margin-bottom: 15px;
+	border-radius: 3px;
+	padding: 5px 8px;
+}
+.rcp_form p.rcp_error {
+	padding: 5px 8px;
+}
+.rcp_form p.rcp_error span, 
+.rcp_form p.rcp_success span {
+	padding: 0;
+}
+.rcp_form .rcp_login_link p {
+	margin: 0;
+}
+.rcp_form .rcp-recurring-total,
+.rcp_header {
+	text-transform: lowercase;
+}
+.rcp_form .rcp-recurring-total th:first-letter,
+.rcp_header:first-letter {
+	text-transform: uppercase;
+}
+.rcp-total {
+	display: none;
 }
 
 /* Smartphones and HiDPI smartphones */

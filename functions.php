@@ -8,6 +8,11 @@ function ct_include_style () {
 }
 add_action( 'wp_enqueue_scripts', 'ct_include_style' );
 
+function ct_theme_setup() {
+	load_child_theme_textdomain( 'christatimmer', get_stylesheet_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'ct_theme_setup' );
+
 // remove the masonry script that comes with the Fran theme
 function ct_dequeue_masonry () {
 	if ( !is_admin() ) {
@@ -18,11 +23,6 @@ function ct_dequeue_masonry () {
 	}
 }
 add_action( 'wp_print_scripts', 'ct_dequeue_masonry' );
-
-function ct_favicon() { ?>
-<link rel="shortcut icon" href="/wp-content/themes/christatimmer/img/favicon.ico" >
-<?php }
-add_action('wp_head', 'ct_favicon');
 
 // sort classes and courses by menu_order
 function ct_class_order( $query ) {
@@ -38,28 +38,37 @@ function ct_class_order( $query ) {
 }
 add_filter( 'pre_get_posts', 'ct_class_order' );
 
-// check if trial has expired
-function trial_active() {
+/**
+ * This will remove the username requirement on the registration form
+ * and use the email address as the username.
+ */
+function jp_rcp_user_registration_data( $user ) {
+	rcp_errors()->remove( 'username_empty' );
+	$user['login'] = $user['email'];
+	return $user;
+}
 
-	global $current_user; 
+add_filter( 'rcp_user_registration_data', 'jp_rcp_user_registration_data' );
 
-	get_currentuserinfo();
+/**
+ * Require first and last names during registration
+ * 
+ * @param array $posted Array of information sent to the form.
+ * 
+ * @return void
+ */
+function ag_rcp_require_first_and_last_names( $posted ) {
+	if ( is_user_logged_in() ) {
+		return;
+	}
 	
-	if ( $current_user ) {
-		$registration_date = $current_user->user_registered;
-
-		if ( ! empty( $registration_date ) ) {
-			$registration_date_timestamp = strtotime($registration_date);
-			$expiration_date = date("Y-m-d H:i:s", strtotime("+1 month", $registration_date_timestamp));
-			$expiration_date_timestamp = strtotime($expiration_date);
-			$current_date_timestamp = time();
-
-			if ( $current_date_timestamp < $expiration_date_timestamp ) {
-				return true;
-			} else {
-				return false;
-			}
-		}
+	if ( empty( $posted['rcp_user_first'] ) ) {
+		rcp_errors()->add( 'first_name_required', __( 'Please enter your first name', 'christatimmer' ), 'register'  );
 	}
 
+	if ( empty( $posted['rcp_user_last'] ) ) {
+		rcp_errors()->add( 'last_name_required', __( 'Please enter your last name', 'christatimmer' ), 'register'  );
+	}
 }
+
+add_action( 'rcp_form_errors', 'ag_rcp_require_first_and_last_names' );
