@@ -5,14 +5,19 @@ Author: Johan van der Wijk
 Template: fran
 */
 
-
+html .header {
+	background-color: #e0d3e6;
+}
+html .top {
+	background-color: #622181;
+}
 .header .site-title {
 	background-image: url( '/wp-content/themes/christatimmer-theme/img/logo-christa-timmer.png' );
 	background-repeat: no-repeat;
 	padding-left: 60px;
 	padding-top: 50px;
 	white-space: nowrap;
-	margin: 60px 0 0 0;
+	margin: 0;
 }
 .header .nav {
 	margin-right: 0;
@@ -84,31 +89,31 @@ Template: fran
 #membership-wrapper #pronamic-pay-form {
 	margin-top: 50px;
 }
-.nieuw,
-.gratis,
-.korting {
+.nieuw img,
+.gratis img,
+.korting img {
 	z-index: 9997;
 	position: absolute;
-	right: 390px;
-	top: 25%;
-	width: 165px;
-	height: 165px;
+	right: 330px;
+	top: 10px;
+	width: 125px;
+	height: 125px;
 }
-.gratis {
-	right: 245px;
+.gratis img {
+	right: 215px;
 }
-.korting {
+.korting img {
 	right: 100px;
 }
 
-.rcp_user_fieldset input,
-.rcp_card_fieldset select {
+.rcp_form input:not([type=checkbox]):not([type=radio]):not([type=submit]),
+.rcp_form select {
 	width: 100%;
 }
-.rcp_card_fieldset select {
+.rcp_form select {
 	padding: 5px 4px;
 }
-#rcp_submit_wrap .rcp-button {
+.rcp_form input[type=submit] {
 	display: block;
 	margin: 20px auto 0 auto;
 	font-size: 22px;
@@ -125,6 +130,13 @@ Template: fran
 	border-radius: 3px;
 	padding: 5px 8px;
 }
+form.rcp_form fieldset {
+	margin-top: 15px;
+}
+.rcp_form legend {
+	font-weight: 600;
+}
+
 .rcp_form p.rcp_error {
 	padding: 5px 8px;
 }

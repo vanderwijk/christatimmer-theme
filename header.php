@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <!--
-Website development by VanderWijk Consultancy - http://vanderwijk.nl
+Website development by VanderWijk Consultancy - https://vanderwijk.nl
 -->
 <meta charset='<?php bloginfo( 'charset' ); ?>' />
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' />
@@ -52,13 +52,13 @@ Website development by VanderWijk Consultancy - http://vanderwijk.nl
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 						<h2 class="site-title"><?php bloginfo( 'name' ); ?></h2>
 					</a>
-					<a href="/abonnement/registreren/" class="nieuw">
+					<a href="/abonnement/" class="nieuw">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/nieuw.svg" alt="Nieuw">
 					</a>
-					<a href="/cursus/billen-benen-buik-training/" class="gratis">
+					<a href="/probeer-deze-lessen-uit/" class="gratis">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gratis.svg" alt="Gratis">
 					</a>
-					<a href="/abonnement/registreren/" class="korting">
+					<a href="/abonnement/" class="korting">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/korting.svg" alt="Korting">
 					</a>
 				</div>
