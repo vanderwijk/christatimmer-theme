@@ -158,6 +158,9 @@ form.rcp_form fieldset {
 .rcp-total {
 	display: none;
 }
+.rcp_message.error {
+	margin-top: 15px;
+}
 
 /* Smartphones and HiDPI smartphones */
 @media screen and (max-width: 480px),
