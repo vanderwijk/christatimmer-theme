@@ -72,3 +72,11 @@ function ag_rcp_require_first_and_last_names( $posted ) {
 }
 
 add_action( 'rcp_form_errors', 'ag_rcp_require_first_and_last_names' );
+
+function ace_block_wp_admin() {
+	if ( is_admin() && ! current_user_can( 'edit_others_pages' ) && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
+		wp_safe_redirect( home_url() );
+		exit;
+	}
+}
+add_action( 'admin_init', 'ace_block_wp_admin' );
