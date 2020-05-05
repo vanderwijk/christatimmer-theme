@@ -13,7 +13,7 @@ get_header(); ?>
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'hero' ); 
 				$thumb_img = get_post( get_post_thumbnail_id() );
 				?>
-				<img src="<?php echo $image[0]; ?>" alt="<?php the_title_attribute(); ?>" itemprop="image" class="featured-image" />
+				<img src="<?php echo $image[0]; ?>" alt="<?php the_title_attribute(); ?>" class="featured-image" />
 			<?php }; ?>
 			<div class="entry-content clearfix">
 				<?php the_content(); ?>

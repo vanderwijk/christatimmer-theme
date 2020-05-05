@@ -13,7 +13,7 @@ Website development by VanderWijk Consultancy - https://vanderwijk.nl
 
 <body <?php body_class(); ?>>
 
-	<header class="header" id="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header class="header" id="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<div class="top" id="top">
 			<div class="row">
 				<div class="col">
@@ -27,7 +27,7 @@ Website development by VanderWijk Consultancy - https://vanderwijk.nl
 						</form>
 <?php } ?>
 
-						<nav class="nav" id="nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<nav class="nav" id="nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 							<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false ) ); ?>
 						</nav>
 
