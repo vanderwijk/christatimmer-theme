@@ -18,19 +18,18 @@ Website development by VanderWijk Consultancy - https://vanderwijk.nl
 		<div class="top" id="top">
 			<div class="row">
 				<div class="col">
-					<div class="block">
+					<div class="block navigation">
 						<button class="menu-toggle" id="menu-toggle"><?php _e( 'Menu', 'fran' ); ?></button>
-
+					<nav class="nav" id="nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false ) ); ?>
+					</nav>
+					
 <?php if ( !get_theme_mod ( 'show_search' ) == '' ) { ?>
 						<form class="searchform" method="get" action="<?php echo home_url(); ?>/">
 							<input type="text" placeholder="<?php _e('Search', 'fran'); ?>" name="s" />
 							<input type="submit" value="&#xf179;" />
 						</form>
 <?php } ?>
-
-						<nav class="nav" id="nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false ) ); ?>
-						</nav>
 
 <?php if ( !get_theme_mod ( 'show_login' ) == '' ) {
 	if ( is_user_logged_in() ) { ?>
