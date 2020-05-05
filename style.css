@@ -221,7 +221,7 @@ html .header .navigation .nav li a {
 	}
 	.header .navigation {
 		width: 100%;
-		display: flex;
+	/*	display: flex; */
 		flex-direction: column;
 	}
 	.header .menu li.search-toggle {
